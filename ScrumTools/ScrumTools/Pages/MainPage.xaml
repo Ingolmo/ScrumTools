@@ -5,21 +5,52 @@
              x:Class="ScrumTools.Pages.MainPage"
              Title="Scrum Tools">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Settings"
-                 Order="Primary" Priority="0" Icon="icon" />
+        <ToolbarItem 
+            Name="Settings"
+            Command="{Binding GoToSettingsCommand}"
+            Order="Primary" Priority="0" Icon="icon" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ScrollView VerticalOptions="Center">
-            <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalOptions="Center" />
-            <Label Text="Te ha dado miedo que lo lea..."
-               TextColor="Red"
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
-            </StackLayout>
-        </ScrollView>
+        <Grid
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image 
+                Grid.Row="0"
+                Source="icon"/>
+            <ScrollView 
+                Grid.Row="1" 
+                Padding="10"
+                BackgroundColor="Gray">
+                <StackLayout
+                    Spacing="10">
+                    <ContentView
+                        
+                        BackgroundColor="Red"
+                        HeightRequest="100">
+                    </ContentView>
+                    <ContentView
+                        BackgroundColor="Red"
+                        HeightRequest="100">
+                    </ContentView>
+                    <ContentView
+                        BackgroundColor="Red"
+                        HeightRequest="100">
+                    </ContentView>
+                    <ContentView
+                        BackgroundColor="Red"
+                        HeightRequest="100">
+                    </ContentView>
+                    <ContentView
+                        BackgroundColor="Red"
+                        HeightRequest="100">
+                    </ContentView>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+        
     </ContentPage.Content>
 	
        

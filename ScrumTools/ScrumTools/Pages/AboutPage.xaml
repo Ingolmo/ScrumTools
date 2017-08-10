@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScrumTools.Pages.AboutPage"
+             Title="About">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Image Source="icon" HeightRequest="100" />
+                    <Label Text="Scrum Tools" HorizontalOptions="Center" TextColor="{StaticResource PrimaryColor}" FontSize="Large"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Scrum Tools" ForegroundColor="{StaticResource PrimaryColor}"/>
+                                    <Span Text=" (1.0) is an application developed by " />
+                                    <Span Text="Juan López García" ForegroundColor="{StaticResource PrimaryColor}"/>
+                                    <Span Text=", available for iOS, Android and Windows." />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="The images used for the cards have been designed by " />
+                                    <Span Text="Redbooth" ForegroundColor="{StaticResource PrimaryColor}"/>
+                                    <Span Text=", under license " />
+                                    <Span Text="Creative Commons – Attribution (CC BY 3.0)" FontAttributes="Bold"/>
+                                    <Span Text="." />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="I also want to show my appreciation to " />
+                                    <Span Text="Adrian G. Jorge" ForegroundColor="{StaticResource PrimaryColor}"/>
+                                    <Span Text=" and " />
+                                    <Span Text="Novoshore Europe S.L." ForegroundColor="{StaticResource PrimaryColor}"/>
+                                    <Span Text=" for their support during the first steps of this project." />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Text="Please do not forget to rate the application." />
+                    <Label Text="Enjoy!" />
+                </StackLayout>
+                <Button Grid.Row="2" Text="Close" Command="{Binding CloseCommand}" Margin="0"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
