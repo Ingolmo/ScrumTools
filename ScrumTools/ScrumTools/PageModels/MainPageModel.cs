@@ -26,11 +26,23 @@ namespace ScrumTools.PageModels
             get { return _goToEvaluateCommand; }
         }
 
+        private ICommand _goToCardsGridCommand;
+        public ICommand GoToCardsGridCommand
+        {
+            get { return _goToCardsGridCommand; }
+        }
+
         /* Private Methods */
         private void InitializeCommands()
         {
             _goToSettingsCommand = new Command(async () => await GoToSettingsExecute());
             _goToEvaluateCommand = new Command(async () => await GoToEvaluateExecute());
+            _goToCardsGridCommand = new Command(async () => await GoToCardsGridExecute());
+        }
+
+        private async Task GoToCardsGridExecute()
+        {
+            await CoreMethods.PushPageModel<CardsGridPageModel>(null, false, true);
         }
 
         private async Task GoToEvaluateExecute()

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScrumTools.Pages.CardsGridPage"
+             Title="Estimate">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Frame Padding="0"
+                    Grid.Row="0" Grid.Column="0">
+                    <ContentView Padding="0" Margin="0">
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[0]}"/>
+                        </ContentView.GestureRecognizers>
+                        <Image Source="{Binding CardList[0].Thumbnail}"/>
+                    </ContentView>
+                </Frame>
+                <Frame Padding="0"
+                    Grid.Row="0" Grid.Column="1">
+                    <ContentView Padding="0" Margin="0">
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[1]}"/>
+                        </ContentView.GestureRecognizers>
+                        <Image Source="{Binding CardList[1].Image}"/>
+                    </ContentView>
+                </Frame>
+                <Frame Padding="0"
+                    Grid.Row="0" Grid.Column="2">
+                    <ContentView Padding="0" Margin="0">
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[2]}"/>
+                        </ContentView.GestureRecognizers>
+                        <Image Source="{Binding CardList[2].Image}"/>
+                    </ContentView>
+                </Frame>
+                
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

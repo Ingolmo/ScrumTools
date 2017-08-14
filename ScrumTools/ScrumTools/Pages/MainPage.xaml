@@ -22,14 +22,19 @@
                 Source="icon"/>
             <ScrollView 
                 Grid.Row="1" 
-                Padding="10"
+                Padding="5"
                 BackgroundColor="Gray">
                 <StackLayout
-                    Spacing="10">
+                    Spacing="5">
                     <ContentView
-                        
                         BackgroundColor="Red"
                         HeightRequest="100">
+                        <ContentView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GoToCardsGridCommand}" />
+                        </ContentView.GestureRecognizers>
+                        <Image
+                            Source="icon"
+                            />
                     </ContentView>
                     <ContentView
                         BackgroundColor="Red"
