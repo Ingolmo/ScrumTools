@@ -16,6 +16,10 @@ namespace ScrumTools.PageModels
         {
             get { return _card.Image; }
         }
+        public string Title
+        {
+            get { return _card.Title; }
+        }
         /* Commands */
 
         /* Overriden Methods */
