@@ -4,7 +4,8 @@
              x:Class="ScrumTools.Pages.CardPage"
              Title="Estimation">
     <ContentPage.Content>
-        <Image Margin="5"
-            Source="{Binding Image}"/>
+        <Frame Padding="0" Margin="5" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="{Binding Image}"/>
+        </Frame>
     </ContentPage.Content>
 </ContentPage>
