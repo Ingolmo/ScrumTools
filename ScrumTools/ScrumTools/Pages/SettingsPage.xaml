@@ -4,20 +4,12 @@
              x:Class="ScrumTools.Pages.SettingsPage"
              Title="Settings">
     <ContentPage.Content>
-        <ScrollView>
-            <Grid Padding="5">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <StackLayout Grid.Row="0">
-                    <Label Text="Welcome to Settings Page!" />
-                </StackLayout>
-                <Button 
-                    Grid.Row="1"
-                    Text="About"
-                    Command="{Binding GoToAboutCommand}"/>
-            </Grid>
-        </ScrollView>
+        <TableView Intent="Settings">
+            <TableView.Root>
+                <TableSection Title="Card's display" >
+                    <SwitchCell Text="List / Grid" />
+                </TableSection>
+            </TableView.Root>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

@@ -4,55 +4,79 @@
              xmlns:local="clr-namespace:ScrumTools"
              x:Class="ScrumTools.Pages.MainPage"
              Title="Scrum Tools">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <!-- ContentView style -->
+            <Style x:Key="Cell" TargetType="ContentView">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="{StaticResource LightBackgroundColor}" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem 
             Name="Settings"
-            Command="{Binding GoToSettingsCommand}"
-            Order="Primary" Priority="0" Icon="icon" />
+            Command="{Binding GoToAboutCommand}"
+            Order="Primary" Priority="0" Icon="info" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <Grid
-            RowSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Image 
-                Grid.Row="0"
-                Source="icon"/>
-            <ScrollView 
-                Grid.Row="1" 
-                Padding="10"
-                BackgroundColor="Gray">
-                <StackLayout
-                    Spacing="10">
-                    <ContentView
-                        
-                        BackgroundColor="Red"
-                        HeightRequest="100">
-                    </ContentView>
-                    <ContentView
-                        BackgroundColor="Red"
-                        HeightRequest="100">
-                    </ContentView>
-                    <ContentView
-                        BackgroundColor="Red"
-                        HeightRequest="100">
-                    </ContentView>
-                    <ContentView
-                        BackgroundColor="Red"
-                        HeightRequest="100">
-                    </ContentView>
-                    <ContentView
-                        BackgroundColor="Red"
-                        HeightRequest="100">
-                    </ContentView>
-                </StackLayout>
-            </ScrollView>
-        </Grid>
-        
-    </ContentPage.Content>
-	
-       
 
+        <Grid BackgroundColor="{StaticResource DarkBackgroundColor}" RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Row="0" Grid.ColumnSpan="2" Source="freak.png" Margin="0,0,0,15"/>
+
+            <ContentView Grid.Row="1" Grid.Column="0" Style="{StaticResource Cell}">
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToCardsGridCommand}" />
+                </ContentView.GestureRecognizers>
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                    <Image Source="cards.png" Margin="5" HeightRequest="100"/>
+                    <Label Text="Estimate" TextColor="{StaticResource PrimaryDarkColor}" FontSize="Large" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </ContentView>
+
+            <ContentView Grid.Row="1" Grid.Column="1" Style="{StaticResource Cell}">
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToSettingsCommand}" />
+                </ContentView.GestureRecognizers>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Margin="5" Source="hourglass.png" HeightRequest="100"/>
+                    <Label Text="Chrono" TextColor="{StaticResource PrimaryDarkColor}" FontSize="Large" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </ContentView>
+
+            <ContentView Grid.Row="2" Grid.Column="0" Style="{StaticResource Cell}">
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToSettingsCommand}" />
+                </ContentView.GestureRecognizers>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Margin="5" Source="documents.png" HeightRequest="100"/>
+                    <Label Text="Documentation" TextColor="{StaticResource PrimaryDarkColor}" FontSize="Large" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </ContentView>
+
+            <ContentView Grid.Row="2" Grid.Column="1" Style="{StaticResource Cell}">
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToSettingsCommand}" />
+                </ContentView.GestureRecognizers>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Margin="5" Source="settings.png" HeightRequest="100"/>
+                    <Label Text="Settings" TextColor="{StaticResource PrimaryDarkColor}" FontSize="Large" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </ContentView>
+        </Grid>
+
+    </ContentPage.Content>
 </ContentPage>
