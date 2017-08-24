@@ -1,5 +1,9 @@
 ﻿using FreshMvvm;
 using ScrumTools.Models;
+using System.Windows.Input;
+using Xamarin.Forms;
+using System;
+using System.Threading.Tasks;
 
 namespace ScrumTools.PageModels
 {
@@ -7,15 +11,20 @@ namespace ScrumTools.PageModels
     {
         /* Properties */
         private Card _card;
+        public string Cover
+        {
+            get { return _card.Cover; }
+        }
         public string Image
         {
             get { return _card.Image; }
         }
-        public string Title
-        {
-            get { return _card.Title; }
-        }
         /* Commands */
+        private ICommand _goToRotateCardCommand;
+        public ICommand GoToRotateCardCommand
+        {
+            get { return _goToRotateCardCommand; }
+        }
 
         /* Overriden Methods */
         public override void Init(object initData)
@@ -23,5 +32,7 @@ namespace ScrumTools.PageModels
             base.Init(initData);
             _card = initData as Card;
         }
+
+        /* Private Methods */
     }
 }
