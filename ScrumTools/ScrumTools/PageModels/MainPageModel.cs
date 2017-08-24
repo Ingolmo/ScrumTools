@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System;
+using ScrumTools.Helpers;
 
 namespace ScrumTools.PageModels
 {
@@ -26,10 +27,10 @@ namespace ScrumTools.PageModels
             get { return _goToAboutCommand; }
         }
 
-        private ICommand _goToCardsGridCommand;
+        private ICommand _goToEstimateCommand;
         public ICommand GoToCardsGridCommand
         {
-            get { return _goToCardsGridCommand; }
+            get { return _goToEstimateCommand; }
         }
 
         /* Private Methods */
@@ -37,12 +38,15 @@ namespace ScrumTools.PageModels
         {
             _goToSettingsCommand = new Command(async () => await GoToSettingsExecute());
             _goToAboutCommand = new Command(async () => await GoToAboutExecute());
-            _goToCardsGridCommand = new Command(async () => await GoToCardsGridExecute());
+            _goToEstimateCommand = new Command(async () => await GoToEstimateExecute());
         }
 
-        private async Task GoToCardsGridExecute()
+        private async Task GoToEstimateExecute()
         {
-            await CoreMethods.PushPageModel<CardsGridPageModel>(null, false, true);
+            if (Settings.CardDisplay.Display.Equals(Settings.CardDisplay.Grid))
+                await CoreMethods.PushPageModel<CardsGridPageModel>(null, false, true);
+            else
+                await CoreMethods.PushPageModel<AboutPageModel>(null, true, true);
         }
 
         private async Task GoToAboutExecute()

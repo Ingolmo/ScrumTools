@@ -1,5 +1,5 @@
-﻿
-using FreshMvvm;
+﻿using FreshMvvm;
+using ScrumTools.Helpers;
 using ScrumTools.PageModels;
 using Xamarin.Forms;
 
@@ -23,6 +23,7 @@ namespace ScrumTools
             var detail = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
 
             MainPage = new FreshNavigationContainer(detail);
+
         }
     }
 }

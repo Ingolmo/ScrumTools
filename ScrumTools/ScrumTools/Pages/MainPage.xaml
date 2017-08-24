@@ -10,13 +10,13 @@
             <!-- ContentView style -->
             <Style x:Key="Cell" TargetType="ContentView">
                 <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="BackgroundColor" Value="{StaticResource LightBackgroundColor}" />
-                <!--<Setter Property="Margin" Value="5" />-->
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="Padding" Value="10" />
             </Style>
             <!-- Cell Label Style -->
             <Style x:Key="CellLabel" TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource PrimaryDarkColor}" />
-                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="{StaticResource LightBackgroundColor}" />
+                <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
             </Style>
             <!-- Cell Image Style -->
@@ -35,9 +35,9 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
 
-        <Grid BackgroundColor="{StaticResource DarkBackgroundColor}" RowSpacing="0" ColumnSpacing="0">
+        <Grid BackgroundColor="{StaticResource LightBackgroundColor}" RowSpacing="5" ColumnSpacing="5" Padding="5">
             <Grid.RowDefinitions>
-                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
@@ -46,9 +46,9 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Row="0" Grid.ColumnSpan="2" Source="freak.png" Margin="0,0,0,5"/>
+            <Image Grid.Row="0" Grid.ColumnSpan="2" Source="icon.png" />
 
-            <ContentView Grid.Row="1" Grid.Column="0" Margin="5,0,5,5" Style="{StaticResource Cell}">
+            <ContentView Grid.Row="1" Grid.Column="0" Style="{StaticResource Cell}" >
                 <ContentView.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToCardsGridCommand}" />
                 </ContentView.GestureRecognizers>
@@ -58,17 +58,17 @@
                 </StackLayout>
             </ContentView>
 
-            <ContentView Grid.Row="1" Grid.Column="1" Margin="0,0,5,5" Style="{StaticResource Cell}">
+            <ContentView Grid.Row="1" Grid.Column="1" Style="{StaticResource Cell}">
                 <!--<ContentView.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToChronoCommand}" />
                 </ContentView.GestureRecognizers>-->
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                    <Image Style="{StaticResource CellImage}" Source="hourglass.png"/>
+                    <Image Style="{StaticResource CellImage}" Source="timer.png"/>
                     <Label Text="Chrono" Style="{StaticResource CellLabel}" />
                 </StackLayout>
             </ContentView>
 
-            <ContentView Grid.Row="2" Grid.Column="0" Margin="5,0,5,5" Style="{StaticResource Cell}">
+            <ContentView Grid.Row="2" Grid.Column="0" Style="{StaticResource Cell}">
                 <!--<ContentView.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToDocumentationCommand}" />
                 </ContentView.GestureRecognizers>-->
@@ -78,7 +78,7 @@
                 </StackLayout>
             </ContentView>
 
-            <ContentView Grid.Row="2" Grid.Column="1" Margin="0,0,5,5" Style="{StaticResource Cell}">
+            <ContentView Grid.Row="2" Grid.Column="1" Style="{StaticResource Cell}">
                 <ContentView.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding GoToSettingsCommand}" />
                 </ContentView.GestureRecognizers>

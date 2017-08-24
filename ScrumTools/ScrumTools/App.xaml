@@ -5,13 +5,13 @@
 	<Application.Resources>
         <ResourceDictionary>
             <!-- Color Schema -->
-            <Color x:Key="PrimaryColor">#2196F3</Color>
-            <Color x:Key="PrimaryDarkColor">#1976D2</Color>
-            <Color x:Key="AccentColor">#96d1ff</Color>
+            <Color x:Key="PrimaryColor">#FF6700</Color>
+            <Color x:Key="PrimaryDarkColor">#A64300</Color>
+            <Color x:Key="AccentColor">#00A287</Color>
             <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
             <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
             <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="LightTextColor">#ffffff</Color>
             
             <!-- Styles -->
             <Style TargetType="NavigationPage">

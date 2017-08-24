@@ -7,7 +7,7 @@
         <TableView Intent="Settings">
             <TableView.Root>
                 <TableSection Title="Card's display" >
-                    <SwitchCell Text="List / Grid" />
+                    <SwitchCell Text="Display cards as Grid"  On="{Binding GridOn}" />
                 </TableSection>
             </TableView.Root>
         </TableView>
