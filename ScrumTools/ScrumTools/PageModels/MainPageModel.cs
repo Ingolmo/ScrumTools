@@ -33,12 +33,19 @@ namespace ScrumTools.PageModels
             get { return _goToEstimateCommand; }
         }
 
+        private ICommand _goToComingSoonCommand;
+        public ICommand GoToComingSoonCommand
+        {
+            get { return _goToComingSoonCommand; }
+        }
+
         /* Private Methods */
         private void InitializeCommands()
         {
             _goToSettingsCommand = new Command(async () => await GoToSettingsExecute());
             _goToAboutCommand = new Command(async () => await GoToAboutExecute());
             _goToEstimateCommand = new Command(async () => await GoToEstimateExecute());
+            _goToComingSoonCommand = new Command(async () => await GoToComingSoonExecute());
         }
 
         private async Task GoToEstimateExecute()
@@ -46,7 +53,7 @@ namespace ScrumTools.PageModels
             if (Settings.CardDisplay.Display.Equals(Settings.CardDisplay.Grid))
                 await CoreMethods.PushPageModel<CardsGridPageModel>(null, false, true);
             else
-                await CoreMethods.PushPageModel<AboutPageModel>(null, true, true);
+                await CoreMethods.PushPageModel<ComingSoonPageModel>(null, true, true);
         }
 
         private async Task GoToAboutExecute()
@@ -57,6 +64,11 @@ namespace ScrumTools.PageModels
         private async Task GoToSettingsExecute()
         {
             await CoreMethods.PushPageModel<SettingsPageModel>(null, false, true);
+        }
+
+        private async Task GoToComingSoonExecute()
+        {
+            await CoreMethods.PushPageModel<ComingSoonPageModel>(null, true, true);
         }
     }
 }
