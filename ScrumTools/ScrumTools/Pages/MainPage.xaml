@@ -6,7 +6,14 @@
              Title="Scrum Tools">
     <ContentPage.Resources>
         <ResourceDictionary>
-            
+
+            <!-- Grid Style -->
+            <Style x:Key="Grid" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBackgroundColor}" />
+                <Setter Property="RowSpacing" Value="5" />
+                <Setter Property="ColumnSpacing" Value="5" />
+                <Setter Property="Padding" Value="5" />
+            </Style>
             <!-- ContentView style -->
             <Style x:Key="Cell" TargetType="ContentView">
                 <Setter Property="VerticalOptions" Value="Center" />
@@ -15,8 +22,9 @@
             </Style>
             <!-- Cell Label Style -->
             <Style x:Key="CellLabel" TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource LightBackgroundColor}" />
+                <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
                 <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
             </Style>
             <!-- Cell Image Style -->
@@ -35,7 +43,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
 
-        <Grid BackgroundColor="{StaticResource LightBackgroundColor}" RowSpacing="5" ColumnSpacing="5" Padding="5">
+        <Grid Style="{StaticResource Grid}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
@@ -46,7 +54,9 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Row="0" Grid.ColumnSpan="2" Source="icon.png" />
+            <ContentView Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource LightTextColor}" Padding="15" >
+                <Image Source="logo.png"  VerticalOptions="Center"/>
+            </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="0" Style="{StaticResource Cell}" >
                 <ContentView.GestureRecognizers>
@@ -59,9 +69,9 @@
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="1" Style="{StaticResource Cell}">
-                <!--<ContentView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding GoToChronoCommand}" />
-                </ContentView.GestureRecognizers>-->
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToComingSoonCommand}" />
+                </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                     <Image Style="{StaticResource CellImage}" Source="timer.png"/>
                     <Label Text="Chrono" Style="{StaticResource CellLabel}" />
@@ -69,9 +79,9 @@
             </ContentView>
 
             <ContentView Grid.Row="2" Grid.Column="0" Style="{StaticResource Cell}">
-                <!--<ContentView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding GoToDocumentationCommand}" />
-                </ContentView.GestureRecognizers>-->
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoToComingSoonCommand}" />
+                </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                     <Image Style="{StaticResource CellImage}" Source="documents.png"/>
                     <Label Text="Documentation" Style="{StaticResource CellLabel}" />

@@ -5,20 +5,20 @@
 	<Application.Resources>
         <ResourceDictionary>
             <!-- Color Schema -->
-            <Color x:Key="PrimaryColor">#FF6700</Color>
-            <Color x:Key="PrimaryDarkColor">#A64300</Color>
-            <Color x:Key="AccentColor">#00A287</Color>
-            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
-            <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
-            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
-            <Color x:Key="LightTextColor">#ffffff</Color>
+            <Color x:Key="PrimaryColor">#8ABBB5</Color>
+            <Color x:Key="PrimaryDarkColor">#55807E</Color>
+            <Color x:Key="AccentColor">#55807E</Color>
+            <Color x:Key="LightBackgroundColor">#928D96</Color>
+            <Color x:Key="DarkBackgroundColor">#232331</Color>
+            <Color x:Key="MediumGrayTextColor">#CDD9DC</Color>
+            <Color x:Key="LightTextColor">#E6EAEE</Color>
             
             <!-- Styles -->
-            <Style TargetType="NavigationPage">
+            <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarTextColor" Value="{StaticResource LightTextColor}" />
             </Style>
-            
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

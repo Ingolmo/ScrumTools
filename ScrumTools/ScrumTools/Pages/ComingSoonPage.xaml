@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScrumTools.Pages.ComingSoonPage"
+             Title="Coming Soon...">
+    <ContentPage.Content>
+        <Grid Padding="5" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <Image Grid.Row="0" Source="robot.png" HeightRequest="150" VerticalOptions="End"/>
+            <Label Grid.Row="1" Text="This section is under construction. It will be available soon!!" TextColor="{StaticResource PrimaryColor}" HorizontalTextAlignment="Center" VerticalOptions="Start"/>
+            <Button Grid.Row="2" Text="Close" Command="{Binding CloseCommand}" Margin="0" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource LightTextColor}"/>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
