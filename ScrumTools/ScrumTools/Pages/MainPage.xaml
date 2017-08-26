@@ -60,7 +60,7 @@
 
             <ContentView Grid.Row="1" Grid.Column="0" Style="{StaticResource Cell}" >
                 <ContentView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding GoToCardsGridCommand}" />
+                    <TapGestureRecognizer Command="{Binding GoToEstimateCommand}" />
                 </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
                     <Image Style="{StaticResource CellImage}" Source="cards.png"/>

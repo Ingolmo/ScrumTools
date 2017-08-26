@@ -28,7 +28,7 @@ namespace ScrumTools.PageModels
         }
 
         private ICommand _goToEstimateCommand;
-        public ICommand GoToCardsGridCommand
+        public ICommand GoToEstimateCommand
         {
             get { return _goToEstimateCommand; }
         }
@@ -53,7 +53,7 @@ namespace ScrumTools.PageModels
             if (Settings.CardDisplay.Display.Equals(Settings.CardDisplay.Grid))
                 await CoreMethods.PushPageModel<CardsGridPageModel>(null, false, true);
             else
-                await CoreMethods.PushPageModel<ComingSoonPageModel>(null, true, true);
+                await CoreMethods.PushPageModel<CardsListPageModel>(null, false, true);
         }
 
         private async Task GoToAboutExecute()

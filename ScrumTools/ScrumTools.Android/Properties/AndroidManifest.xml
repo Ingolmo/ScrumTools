@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="1" android:versionName="1.0" package="com.juanlopez.scrumtools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionName="1.1" package="com.juanlopez.scrumtools" android:versionCode="2">
 	<uses-sdk android:minSdkVersion="15" />
 	<application android:label="Scrum Tools" android:icon="@drawable/icon"></application>
 </manifest>

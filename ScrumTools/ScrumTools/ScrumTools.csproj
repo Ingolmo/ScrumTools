@@ -43,6 +43,7 @@
     <Compile Include="PageModels\AboutPageModel.cs" />
     <Compile Include="PageModels\CardPageModel.cs" />
     <Compile Include="PageModels\CardsGridPageModel.cs" />
+    <Compile Include="PageModels\CardsListPageModel.cs" />
     <Compile Include="PageModels\ComingSoonPageModel.cs" />
     <Compile Include="PageModels\MainPageModel.cs" />
     <Compile Include="PageModels\SettingsPageModel.cs" />
@@ -54,6 +55,9 @@
     </Compile>
     <Compile Include="Pages\CardsGridPage.xaml.cs">
       <DependentUpon>CardsGridPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CardsListPage.xaml.cs">
+      <DependentUpon>CardsListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ComingSoonPage.xaml.cs">
       <DependentUpon>ComingSoonPage.xaml</DependentUpon>
@@ -145,6 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\ComingSoonPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\CardsListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
