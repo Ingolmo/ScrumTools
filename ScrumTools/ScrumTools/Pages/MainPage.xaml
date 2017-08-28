@@ -54,8 +54,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <ContentView Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource PrimaryDarkColor}" Padding="15" >
-                <Image Source="logo.png"  VerticalOptions="Center"/>
+            <ContentView Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource PrimaryDarkColor}"  VerticalOptions="Fill" HorizontalOptions="Fill" Padding="0">
+                <Image Source="logo.png" Aspect="AspectFill"/>
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="0" Style="{StaticResource Cell}" >
