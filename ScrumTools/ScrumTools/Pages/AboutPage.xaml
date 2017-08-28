@@ -11,9 +11,11 @@
                 <Setter Property="Padding" Value="2" />
             </Style>
             
-            <!-- Cell Image Style -->
-            <Style x:Key="CellImage" TargetType="Image">
+            <!-- Image Style -->
+            <Style x:Key="Image" TargetType="Image">
                 <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="2" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -71,24 +73,33 @@
                     <Label Text="I hope you enjoy it!" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryColor}"/>
 
                     <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="Center">
-                        <ContentView Style="{StaticResource Cell}" >
-                            <ContentView.GestureRecognizers>
+                        <Image Style="{StaticResource Image}" Source="github.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToGitHubCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Style="{StaticResource Image}" Source="linkedin.png">
+                            <Image.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding GoToLinkedinCommand}" />
-                            </ContentView.GestureRecognizers>
-                            <Image Style="{StaticResource CellImage}" Source="linkedin.png"/>
-                        </ContentView>
-                        <ContentView Style="{StaticResource Cell}" >
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Style="{StaticResource Image}" Source="twitter.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToTwitterCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <!--<ContentView Style="{StaticResource Cell}" >
                             <ContentView.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding GoToGitHubCommand}" />
                             </ContentView.GestureRecognizers>
-                            <Image Style="{StaticResource CellImage}" Source="github.png"/>
+                            <Image Style="{StaticResource Image}" Source="github.png"/>
                         </ContentView>
                         <ContentView Style="{StaticResource Cell}" >
                             <ContentView.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding GoToTwitterCommand}" />
                             </ContentView.GestureRecognizers>
                             <Image Style="{StaticResource CellImage}" Source="twitter.png"/>
-                        </ContentView>
+                        </ContentView>-->
                     </StackLayout>
                 </StackLayout>
                 

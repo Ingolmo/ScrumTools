@@ -54,7 +54,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <ContentView Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource LightTextColor}" Padding="15" >
+            <ContentView Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource PrimaryDarkColor}" Padding="15" >
                 <Image Source="logo.png"  VerticalOptions="Center"/>
             </ContentView>
 

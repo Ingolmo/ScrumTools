@@ -2,17 +2,17 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScrumTools.App">
-	<Application.Resources>
+    <Application.Resources>
         <ResourceDictionary>
             <!-- Color Schema -->
-            <Color x:Key="PrimaryColor">#8ABBB5</Color>
-            <Color x:Key="PrimaryDarkColor">#55807E</Color>
-            <Color x:Key="AccentColor">#55807E</Color>
-            <Color x:Key="LightBackgroundColor">#928D96</Color>
-            <Color x:Key="DarkBackgroundColor">#232331</Color>
-            <Color x:Key="MediumGrayTextColor">#CDD9DC</Color>
-            <Color x:Key="LightTextColor">#E6EAEE</Color>
-            
+            <Color x:Key="PrimaryColor">#BA3034</Color>
+            <Color x:Key="PrimaryDarkColor">#95161A</Color>
+            <Color x:Key="AccentColor">#95161A</Color>
+            <Color x:Key="LightBackgroundColor">#FD9093</Color>
+            <Color x:Key="DarkBackgroundColor">#6B0003</Color>
+            <Color x:Key="MediumGrayTextColor">#D1C5C5</Color>
+            <Color x:Key="LightTextColor">#FEF5F5</Color>
+
             <!-- Styles -->
             <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />

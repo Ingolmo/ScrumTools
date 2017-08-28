@@ -12,7 +12,7 @@
             </Grid.RowDefinitions>
             
             <Image Grid.Row="0" Source="robot.png" HeightRequest="150" VerticalOptions="End"/>
-            <Label Grid.Row="1" Text="This section is under construction. It will be available soon!!" TextColor="{StaticResource PrimaryColor}" HorizontalTextAlignment="Center" VerticalOptions="Start"/>
+            <Label Grid.Row="1" Text="This section is under construction. It will be available soon!!" HorizontalTextAlignment="Center" VerticalOptions="Start"/>
             <Button Grid.Row="2" Text="Close" Command="{Binding CloseCommand}" Margin="0" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource LightTextColor}"/>
             
         </Grid>
