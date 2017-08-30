@@ -11,20 +11,13 @@ namespace ScrumTools.PageModels
     {
         /* Properties */
         private Card _card;
-        public string Cover
-        {
-            get { return _card.Cover; }
-        }
         public string Image
         {
             get { return _card.Image; }
         }
+
         /* Commands */
-        private ICommand _goToRotateCardCommand;
-        public ICommand GoToRotateCardCommand
-        {
-            get { return _goToRotateCardCommand; }
-        }
+        
 
         /* Overriden Methods */
         public override void Init(object initData)

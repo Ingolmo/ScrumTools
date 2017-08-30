@@ -68,7 +68,7 @@ namespace ScrumTools.PageModels
 
         private async Task GoToComingSoonExecute()
         {
-            await CoreMethods.PushPageModel<ComingSoonPageModel>(null, true, true);
+            await CoreMethods.PushPageModel<TimerPageModel>(null, true, true);
         }
     }
 }

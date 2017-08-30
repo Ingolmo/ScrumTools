@@ -74,7 +74,7 @@
                 </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                     <Image Style="{StaticResource CellImage}" Source="timer.png"/>
-                    <Label Text="Chrono" Style="{StaticResource CellLabel}" />
+                    <Label Text="Timer" Style="{StaticResource CellLabel}" />
                 </StackLayout>
             </ContentView>
 

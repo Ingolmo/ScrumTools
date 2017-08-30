@@ -34,6 +34,7 @@
     <item name="android:windowIsTranslucent">false</item>
     <item name="android:windowIsFloating">false</item>
     <item name="android:backgroundDimEnabled">true</item>
+    <item name="android:windowTranslucentStatus">true</item>
   </style>
   
 </resources>

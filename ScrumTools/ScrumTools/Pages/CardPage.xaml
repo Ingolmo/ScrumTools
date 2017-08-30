@@ -5,11 +5,6 @@
              Title="Estimation">
     <ContentPage.Content>
         <Frame Padding="0" Margin="5" VerticalOptions="Center" HorizontalOptions="Center">
-            <ContentView>
-                <ContentView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding GoToRotateCardCommand}" />
-                </ContentView.GestureRecognizers>
-            </ContentView>
             <Image x:Name="image" Source="{Binding Image}"/>
         </Frame>
     </ContentPage.Content>

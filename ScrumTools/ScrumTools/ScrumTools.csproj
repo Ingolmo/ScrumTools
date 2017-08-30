@@ -47,6 +47,7 @@
     <Compile Include="PageModels\ComingSoonPageModel.cs" />
     <Compile Include="PageModels\MainPageModel.cs" />
     <Compile Include="PageModels\SettingsPageModel.cs" />
+    <Compile Include="PageModels\TimerPageModel.cs" />
     <Compile Include="Pages\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -67,6 +68,9 @@
     </Compile>
     <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TimerPage.xaml.cs">
+      <DependentUpon>TimerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CardsService.cs" />
@@ -105,6 +109,9 @@
     <Reference Include="UXDivers.Gorilla.SDK, Version=1.0.0.15, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\UXDivers.GorillaPlayer.SDK.1.0.0.15\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\UXDivers.Gorilla.SDK.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\3.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
@@ -155,6 +162,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\CardsListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\TimerPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
