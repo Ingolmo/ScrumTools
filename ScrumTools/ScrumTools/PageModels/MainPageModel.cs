@@ -39,6 +39,12 @@ namespace ScrumTools.PageModels
             get { return _goToComingSoonCommand; }
         }
 
+        private ICommand _goToTimerCommand;
+        public ICommand GoToTimerCommand
+        {
+            get { return _goToTimerCommand; }
+        }
+
         /* Private Methods */
         private void InitializeCommands()
         {
@@ -46,6 +52,7 @@ namespace ScrumTools.PageModels
             _goToAboutCommand = new Command(async () => await GoToAboutExecute());
             _goToEstimateCommand = new Command(async () => await GoToEstimateExecute());
             _goToComingSoonCommand = new Command(async () => await GoToComingSoonExecute());
+            _goToTimerCommand = new Command(async () => await GoToTimerExecute());
         }
 
         private async Task GoToEstimateExecute()
@@ -56,19 +63,24 @@ namespace ScrumTools.PageModels
                 await CoreMethods.PushPageModel<CardsListPageModel>(null, false, true);
         }
 
-        private async Task GoToAboutExecute()
-        {
-            await CoreMethods.PushPageModel<AboutPageModel>(null, true, true);
-        }
-
         private async Task GoToSettingsExecute()
         {
             await CoreMethods.PushPageModel<SettingsPageModel>(null, false, true);
         }
 
+        private async Task GoToTimerExecute()
+        {
+            await CoreMethods.PushPageModel<TimerPageModel>(null, false, true);
+        }
+
+        private async Task GoToAboutExecute()
+        {
+            await CoreMethods.PushPageModel<AboutPageModel>(null, true, true);
+        }
+
         private async Task GoToComingSoonExecute()
         {
-            await CoreMethods.PushPageModel<TimerPageModel>(null, true, true);
+            await CoreMethods.PushPageModel<ComingSoonPageModel>(null, true, true);
         }
     }
 }

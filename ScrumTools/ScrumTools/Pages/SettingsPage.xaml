@@ -6,9 +6,25 @@
     <ContentPage.Content>
         <TableView Intent="Settings">
             <TableView.Root>
+                
                 <TableSection Title="Scrum Poker Cards" >
                     <SwitchCell Text="Display cards as a Grid"  On="{Binding GridOn}" />
                 </TableSection>
+                
+                <TableSection Title="Daily Scrum Timer" >
+                    <ViewCell>
+                        <Grid VerticalOptions="Center" Margin="15,0,5,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Text="Default timer value" VerticalTextAlignment="Center"/>
+                            <TimePicker Grid.Column="1" Time="{Binding DefaultTimer}"  HorizontalOptions="Center" ></TimePicker>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+                
             </TableView.Root>
         </TableView>
     </ContentPage.Content>

@@ -3,6 +3,7 @@ using System;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using ScrumTools.Helpers;
 
 namespace ScrumTools.PageModels
 {
@@ -10,24 +11,23 @@ namespace ScrumTools.PageModels
     {
         public TimerPageModel()
         {
+            _isRunning = false;
             InitializeCommands();
         }
 
         /* Properties */
-        private TimeSpan _setTime = new TimeSpan(0, 5, 0);
-        public TimeSpan SetTime
+        private bool _isRunning;
+        public bool IsStop
         {
-            get { return _setTime; }
+            get { return !_isRunning; }
             set
             {
-                _setTime = value;
-                _timeLeft = value;
-                RaisePropertyChanged("SetTime");
-                Time = string.Format("{0:m\\:ss}", _setTime);
+                _isRunning = !value;
+                RaisePropertyChanged("IsStop");
             }
         }
 
-        private TimeSpan _timeLeft;
+        private TimeSpan _timeLeft = Settings.Timer.Time;
         public TimeSpan TimeLeft
         {
             get { return _timeLeft; }
@@ -39,14 +39,12 @@ namespace ScrumTools.PageModels
             }
         }
 
-        private string _time = "5:00";
+        private string _time = Settings.Timer.Time.ToString();
         public string Time
         {
             get { return _time; }
             set { _time = value; RaisePropertyChanged("Time"); }
         }
-
-
 
         /* Commands */
         private Command _startCommand;
@@ -55,22 +53,56 @@ namespace ScrumTools.PageModels
             get { return _startCommand; }
             set { _startCommand = value; }
         }
-                
+        private Command _pauseCommand;
+        public Command PauseCommand
+        {
+            get { return _pauseCommand; }
+            set { _pauseCommand = value; }
+        }
+        private Command _stopCommand;
+        public Command StopCommand
+        {
+            get { return _stopCommand; }
+            set { _stopCommand = value; }
+        }
+
         /* Private Methods */
         private void InitializeCommands()
         {
             _startCommand = new Command(() => StartExecute());
+            _pauseCommand = new Command(() => PauseExecute());
+            _stopCommand = new Command(() => StopExecute());
         }
 
         private void StartExecute()
         {
-            Device.StartTimer(new TimeSpan(0, 0, 1), TimerActive);
-            /* Need to disable the command */
+            if (!_isRunning)
+            {
+                Device.StartTimer(new TimeSpan(0, 0, 1), TimerActive);
+                IsStop = false;
+            }
         }
+
+        private void PauseExecute()
+        {
+            if (_isRunning)
+            {
+                TimeLeft = _timeLeft;
+                IsStop = true;
+                _isRunning = false;
+            }
+        }
+
+        private void StopExecute()
+        {
+            throw new NotImplementedException();
+        }
+
 
         private bool TimerActive()
         {
             if (TimeLeft.TotalSeconds==0)
+                /* Launch alarm events */
                 return false;
             else
                 TimeLeft = _timeLeft.Subtract(new TimeSpan(0, 0, 1));
