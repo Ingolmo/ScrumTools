@@ -17,6 +17,17 @@ namespace ScrumTools.PageModels
 
         /* Properties */
         private bool _isRunning;
+        public bool IsRuning
+        {
+            get { return _isRunning; }
+            set
+            {
+                _isRunning = value;
+                RaisePropertyChanged("IsRuninng");
+                RaisePropertyChanged("IsStop");
+            }
+        }
+
         public bool IsStop
         {
             get { return !_isRunning; }
@@ -24,6 +35,7 @@ namespace ScrumTools.PageModels
             {
                 _isRunning = !value;
                 RaisePropertyChanged("IsStop");
+                RaisePropertyChanged("IsRuninng");
             }
         }
 
@@ -70,7 +82,6 @@ namespace ScrumTools.PageModels
         private void InitializeCommands()
         {
             _startCommand = new Command(() => StartExecute());
-            _pauseCommand = new Command(() => PauseExecute());
             _stopCommand = new Command(() => StopExecute());
         }
 
@@ -83,25 +94,18 @@ namespace ScrumTools.PageModels
             }
         }
 
-        private void PauseExecute()
-        {
-            if (_isRunning)
-            {
-                TimeLeft = _timeLeft;
-                IsStop = true;
-                _isRunning = false;
-            }
-        }
-
         private void StopExecute()
         {
-            throw new NotImplementedException();
+            _isRunning = true;
+            _timeLeft = Settings.Timer.Time;
+            _time = Settings.Timer.Time.ToString();
+
         }
 
 
         private bool TimerActive()
         {
-            if (TimeLeft.TotalSeconds==0)
+            if (!_isRunning && ((TimeLeft.TotalSeconds==0)))
                 /* Launch alarm events */
                 return false;
             else

@@ -22,8 +22,8 @@
                 </Label>
             </Frame>
             <StackLayout Grid.Row="2">
-                <Button  Text="Start" Command="{Binding StartCommand}" IsEnabled="{Binding IsStop}"  />
-                <Button  Text="Pause" Command="{Binding PauseCommand}" IsEnabled="{Binding IsStop}"/>
+                <Button  Text="Start" Command="{Binding StartCommand}"  IsEnabled="{Binding IsStop}" />
+                <Button  Text="Pause" Command="{Binding StopCommand}" IsEnabled="{Binding IsRuning}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
