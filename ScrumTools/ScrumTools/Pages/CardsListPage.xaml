@@ -17,8 +17,12 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Grid.Column="0" Source="{Binding Thumbnail}"/>
-
+                            <Image Grid.Column="0" >
+                                <Image.Source>
+                                    <FileImageSource File="{Binding Thumbnail}" />
+                                </Image.Source>
+                            </Image>
+                            
                             <StackLayout Grid.Column="1" VerticalOptions="Center" Spacing="1">
                                 <Label Text="{Binding Title}" TextColor="{StaticResource PrimaryColor}" VerticalOptions="End" FontSize="Medium"/>
                                 <Label Text="{Binding Detail}" TextColor="{StaticResource PrimaryDarkColor}" VerticalOptions="Start" FontSize="Small"/>

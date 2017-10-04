@@ -5,7 +5,11 @@
              Title="Estimation">
     <ContentPage.Content>
         <Frame Padding="0" Margin="5" VerticalOptions="Center" HorizontalOptions="Center">
-            <Image x:Name="image" Source="{Binding Image}"/>
+            <Image>
+                <Image.Source>
+                    <FileImageSource File="{Binding Image}" />
+                </Image.Source>
+            </Image>
         </Frame>
     </ContentPage.Content>
 </ContentPage>

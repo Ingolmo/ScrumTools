@@ -55,7 +55,11 @@
             </Grid.ColumnDefinitions>
 
             <ContentView Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource PrimaryDarkColor}"  VerticalOptions="Fill" HorizontalOptions="Fill" Padding="0">
-                <Image Source="logo.png" Aspect="AspectFill"/>
+                <Image Aspect="AspectFill">
+                    <Image.Source>
+                        <FileImageSource File="logo.png"/>
+                    </Image.Source>
+                </Image>
             </ContentView>
 
             <ContentView Grid.Row="1" Grid.Column="0" Style="{StaticResource Cell}" >
@@ -63,7 +67,11 @@
                     <TapGestureRecognizer Command="{Binding GoToEstimateCommand}" />
                 </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
-                    <Image Style="{StaticResource CellImage}" Source="cards.png"/>
+                    <Image Style="{StaticResource CellImage}">
+                        <Image.Source>
+                            <FileImageSource File="cards.png"/>
+                        </Image.Source>
+                    </Image>
                     <Label Text="Estimate" Style="{StaticResource CellLabel}" />
                 </StackLayout>
             </ContentView>
@@ -73,7 +81,11 @@
                     <TapGestureRecognizer Command="{Binding GoToTimerCommand}" />
                 </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                    <Image Style="{StaticResource CellImage}" Source="timer.png"/>
+                    <Image Style="{StaticResource CellImage}">
+                        <Image.Source>
+                            <FileImageSource File="timer.png"/>
+                        </Image.Source>
+                    </Image>
                     <Label Text="Timer" Style="{StaticResource CellLabel}" />
                 </StackLayout>
             </ContentView>
@@ -83,7 +95,11 @@
                     <TapGestureRecognizer Command="{Binding GoToComingSoonCommand}" />
                 </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                    <Image Style="{StaticResource CellImage}" Source="documents.png"/>
+                    <Image Style="{StaticResource CellImage}">
+                        <Image.Source>
+                            <FileImageSource File="documents.png"/>
+                        </Image.Source>
+                    </Image>
                     <Label Text="Documentation" Style="{StaticResource CellLabel}" />
                 </StackLayout>
             </ContentView>
@@ -93,7 +109,11 @@
                     <TapGestureRecognizer Command="{Binding GoToSettingsCommand}" />
                 </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                    <Image Style="{StaticResource CellImage}" Source="settings.png" />
+                    <Image Style="{StaticResource CellImage}">
+                        <Image.Source>
+                            <FileImageSource File="settings.png"/>
+                        </Image.Source>
+                    </Image>
                     <Label Text="Settings" Style="{StaticResource CellLabel}" />
                 </StackLayout>
             </ContentView>

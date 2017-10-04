@@ -26,7 +26,10 @@ namespace ScrumTools.PageModels
             set
             {
                 if (value != null)
+                {
                     CoreMethods.PushPageModel<CardPageModel>(value);
+                    RaisePropertyChanged("SelectedCard");
+                }                 
             }
         }
 

@@ -1955,7 +1955,7 @@ namespace ScrumTools.Droid
 			public const int cards = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int cover = 2130837583;
+			public const int close = 2130837583;
 			
 			// aapt resource value: 0x7f020050
 			public const int design_fab_background = 2130837584;

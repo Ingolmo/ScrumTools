@@ -19,6 +19,10 @@
                 <Setter Property="BarTextColor" Value="{StaticResource LightTextColor}" />
             </Style>
 
+            <Style TargetType="Image">
+                <Setter Property="IsOpaque" Value="False" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

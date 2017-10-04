@@ -20,116 +20,172 @@
                 </Grid.ColumnDefinitions>
 
                 <Frame Grid.Row="0" Grid.Column="0" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[0]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[0].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[0]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[0].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="0" Grid.Column="1" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[1]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[1].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[1]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[1].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="0" Grid.Column="2" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[2]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[2].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[2]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[2].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="1" Grid.Column="0" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[3]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[3].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[3]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[3].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="1" Grid.Column="1" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[4]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[4].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[4]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[4].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="1" Grid.Column="2" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[5]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[5].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[5]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[5].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="2" Grid.Column="0" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[6]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[6].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[6]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[6].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="2" Grid.Column="1" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[7]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[7].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[7]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[7].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="2" Grid.Column="2" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[8]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[8].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[8]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[8].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="3" Grid.Column="0" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[9]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[9].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[9]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[9].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
-                <Frame Grid.Row="3" Grid.Column="1" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[10]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[10].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                <Frame Grid.Row="3" Grid.Column="1" Padding="0" >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[10]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[10].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
-                <Frame Grid.Row="3" Grid.Column="2" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[11]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[11].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                <Frame Grid.Row="3" Grid.Column="2" Padding="0" >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[11]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[11].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
-                <Frame Grid.Row="4" Grid.Column="0" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[12]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[12].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                <Frame Grid.Row="4" Grid.Column="0" Padding="0" >
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[12]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[12].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
                 <Frame Grid.Row="4" Grid.Column="1" Padding="0">
-                    <ContentView Padding="0" Margin="0">
-                        <ContentView.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[13]}"/>
-                        </ContentView.GestureRecognizers>
-                        <Image Source="{Binding CardList[13].Thumbnail}" Aspect="AspectFill"/>
-                    </ContentView>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToCardCommand}" CommandParameter="{Binding CardList[13]}"/>
+                    </Frame.GestureRecognizers>
+                    <Frame.Content>
+                        <Image Aspect="AspectFill">
+                            <Image.Source>
+                                <FileImageSource File="{Binding CardList[13].Thumbnail}"/>
+                            </Image.Source>
+                        </Image>
+                    </Frame.Content>
                 </Frame>
             </Grid>
         </ScrollView>
