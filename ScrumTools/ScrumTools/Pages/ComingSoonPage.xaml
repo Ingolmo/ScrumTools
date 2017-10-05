@@ -11,9 +11,31 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Image Source="robot.png" HeightRequest="150" />
-            <Label Margin="25"  Text="This section is under construction." HorizontalTextAlignment="Center" FontSize="Large"/>
-            <Label Text="It will be available very soon!!" HorizontalTextAlignment="Center" FontSize="Large"/>
+            <Image HeightRequest="150" Margin="0,0,0,20">
+                <Image.Source>
+                    <FileImageSource File="robot.png" />
+                </Image.Source>
+            </Image>
+            <Label HorizontalTextAlignment="Center" >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="This section is under construction..." FontSize="Medium"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label HorizontalTextAlignment="Center" FontSize="Medium">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="It will be available " />
+                            <Span Text="very soon" ForegroundColor="{StaticResource PrimaryDarkColor}"/>
+                            <Span Text=" !!" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>          
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
