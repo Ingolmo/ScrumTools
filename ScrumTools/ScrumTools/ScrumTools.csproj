@@ -40,11 +40,13 @@
     </Compile>
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\Doc.cs" />
     <Compile Include="PageModels\AboutPageModel.cs" />
     <Compile Include="PageModels\CardPageModel.cs" />
     <Compile Include="PageModels\CardsGridPageModel.cs" />
     <Compile Include="PageModels\CardsListPageModel.cs" />
     <Compile Include="PageModels\ComingSoonPageModel.cs" />
+    <Compile Include="PageModels\DocsListPageModel.cs" />
     <Compile Include="PageModels\MainPageModel.cs" />
     <Compile Include="PageModels\SettingsPageModel.cs" />
     <Compile Include="PageModels\TimerPageModel.cs" />
@@ -63,6 +65,9 @@
     <Compile Include="Pages\ComingSoonPage.xaml.cs">
       <DependentUpon>ComingSoonPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DocsListPage.xaml.cs">
+      <DependentUpon>DocsListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -74,6 +79,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CardsService.cs" />
+    <Compile Include="Services\DocsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\MainPage.xaml">
@@ -168,6 +174,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\TimerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\DocsListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

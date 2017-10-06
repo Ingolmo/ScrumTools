@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ScrumTools.Pages.CardsListPage"
-             Title="Scrum Poker Cards">
+             x:Class="ScrumTools.Pages.DocsListPage"
+             Title="Documentation">
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding CardList}" SelectedItem="{Binding SelectedCard, Mode=TwoWay}" RowHeight="70" SeparatorVisibility="None" CachingStrategy="RecycleElement">
+        <ListView ItemsSource="{Binding DocList}" 
+                  SelectedItem="{Binding SelectedDoc, Mode=TwoWay}"
+                  RowHeight="100"
+                  CachingStrategy="RecycleElement">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -19,7 +22,7 @@
 
                             <Image Grid.Column="0" >
                                 <Image.Source>
-                                    <FileImageSource File="{Binding Thumbnail}" />
+                                    <FileImageSource File="{Binding Icon}" />
                                 </Image.Source>
                             </Image>
 

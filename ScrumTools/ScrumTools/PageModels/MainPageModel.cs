@@ -45,6 +45,12 @@ namespace ScrumTools.PageModels
             get { return _goToTimerCommand; }
         }
 
+        private ICommand _goToDocumentationCommand;
+        public ICommand GoToDocumentationCommand
+        {
+            get { return _goToDocumentationCommand; }
+        }
+
         /* Private Methods */
         private void InitializeCommands()
         {
@@ -53,6 +59,7 @@ namespace ScrumTools.PageModels
             _goToEstimateCommand = new Command(async () => await GoToEstimateExecute());
             _goToComingSoonCommand = new Command(async () => await GoToComingSoonExecute());
             _goToTimerCommand = new Command(async () => await GoToTimerExecute());
+            _goToDocumentationCommand = new Command(async () => await GoToDocumentationExecute());
         }
 
         private async Task GoToEstimateExecute()
@@ -71,6 +78,11 @@ namespace ScrumTools.PageModels
         private async Task GoToTimerExecute()
         {
             await CoreMethods.PushPageModel<TimerPageModel>(null, false, true);
+        }
+
+        private async Task GoToDocumentationExecute()
+        {
+            await CoreMethods.PushPageModel<DocsListPageModel>(null, false, true);
         }
 
         private async Task GoToAboutExecute()

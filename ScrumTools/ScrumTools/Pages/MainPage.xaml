@@ -92,7 +92,7 @@
 
             <ContentView Grid.Row="2" Grid.Column="0" Style="{StaticResource Cell}">
                 <ContentView.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding GoToComingSoonCommand}" />
+                    <TapGestureRecognizer Command="{Binding GoToDocumentationCommand}" />
                 </ContentView.GestureRecognizers>
                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                     <Image Style="{StaticResource CellImage}">
