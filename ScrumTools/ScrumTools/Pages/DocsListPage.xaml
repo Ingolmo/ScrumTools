@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScrumTools.Pages.DocsListPage"
              Title="Documentation">
+             <!--xmlns:resources="clr-namespace:ScrumTools.Resources.Strings;assembly=ScrumTools" Not needed, as I'm binding the list for now. Will be required with translation in the future-->
     <ContentPage.Content>
         <ListView ItemsSource="{Binding DocList}" 
                   SelectedItem="{Binding SelectedDoc, Mode=TwoWay}"
@@ -13,7 +14,7 @@
                     <ViewCell>
                         <Grid Margin="1" Padding="4" ColumnSpacing="15" >
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="80"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>

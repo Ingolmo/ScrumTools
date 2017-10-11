@@ -1,4 +1,5 @@
 ﻿using ScrumTools.Models;
+using ScrumTools.Resources.Strings;
 using System.Collections.Generic;
 
 namespace ScrumTools.Services
@@ -9,8 +10,9 @@ namespace ScrumTools.Services
         {
             return new List<Doc>()
             {
-                new Doc() { Title = "Agile Principles", Detail="Agile principles", Icon="info.png", },
-                new Doc() { Title = "test", Detail="test", Icon="info.png", },
+                new Doc() { Title = AppResources.Scrum, Detail=AppResources.ScrumDescription, Icon="info.png", },
+                new Doc() { Title = AppResources.AgilePrinciples, Detail=AppResources.AgilePrinciplesDescription, Icon="info.png", },
+                new Doc() { Title = "test", Detail="test", Icon="info.png", }
             };
         }
 
