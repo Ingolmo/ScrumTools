@@ -137,16 +137,40 @@
 12. At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behaviour accordingly.</value>
   </data>
   <data name="AgilePrinciplesDescription" xml:space="preserve">
-    <value>12 Agile Principles</value>
+    <value>Basics of the Agile Methodologies</value>
+  </data>
+  <data name="CommingSoon" xml:space="preserve">
+    <value>Comming Soon</value>
+  </data>
+  <data name="CommingSoonContent" xml:space="preserve">
+    <value>This section is under construction. It will be available very soon!!</value>
+  </data>
+  <data name="CommingSoonDescription" xml:space="preserve">
+    <value>We're still working on this...</value>
   </data>
   <data name="Scrum" xml:space="preserve">
     <value>Scrum</value>
+  </data>
+  <data name="ScrumArtifacts" xml:space="preserve">
+    <value>Scrum Artifacts</value>
+  </data>
+  <data name="ScrumArtifactsContent" xml:space="preserve">
+    <value>Product Backlog: The Product backlog is a living artifact that may be subjected to change, when there is a change in the external business environment, market conditions, regulatory changes or technology changes.
+
+Sprint Backlog: The Sprint backlog formation is usually guided by the Sprint Goal. It is a forecast by the development team on what functionality the team will have to work and deliver.
+
+Burn Down Chart: At any point in time in a Sprint, the total work remaining in the Sprint Backlog can be summed. The Team tracks this total work remaining for every Daily Scrum to project the likelihood of achieving the Sprint Goal. By tracking the remaining work throughout the Sprint, the Team can manage its progress.
+
+Product Increment: This product increment must be the sum of all the Product Backlog items completed during the current sprint and the value of the increments produced during all of the previous sprints. The Product increment must be in a usable condition regardless of when the Product Owner decides to actually release it.</value>
+  </data>
+  <data name="ScrumArtifactsDescription" xml:space="preserve">
+    <value>Main Scrum Elements</value>
   </data>
   <data name="ScrumContent" xml:space="preserve">
     <value>Scrum (n): A framework within which people can address complex adaptive problems, while
 productively and creatively delivering products of the highest possible value.</value>
   </data>
   <data name="ScrumDescription" xml:space="preserve">
-    <value>Definition of Scrum</value>
+    <value>Definition of Scrum framework</value>
   </data>
 </root>

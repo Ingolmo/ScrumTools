@@ -7,14 +7,14 @@
     <ContentPage.Content>
         <ListView ItemsSource="{Binding DocList}" 
                   SelectedItem="{Binding SelectedDoc, Mode=TwoWay}"
-                  RowHeight="100"
+                  RowHeight="75"
                   CachingStrategy="RecycleElement">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Margin="1" Padding="4" ColumnSpacing="15" >
+                        <Grid Margin="1" Padding="4" ColumnSpacing="5" VerticalOptions="Center">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="60"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>

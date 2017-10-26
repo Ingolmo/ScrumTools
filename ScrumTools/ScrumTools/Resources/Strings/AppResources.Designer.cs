@@ -20,7 +20,7 @@ namespace ScrumTools.Resources.Strings {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppResources {
@@ -83,11 +83,38 @@ namespace ScrumTools.Resources.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 12 Agile Principles.
+        ///   Looks up a localized string similar to Basics of the Agile Methodologies.
         /// </summary>
         internal static string AgilePrinciplesDescription {
             get {
                 return ResourceManager.GetString("AgilePrinciplesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comming Soon.
+        /// </summary>
+        internal static string CommingSoon {
+            get {
+                return ResourceManager.GetString("CommingSoon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This section is under construction. It will be available very soon!!.
+        /// </summary>
+        internal static string CommingSoonContent {
+            get {
+                return ResourceManager.GetString("CommingSoonContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We&apos;re still working on this....
+        /// </summary>
+        internal static string CommingSoonDescription {
+            get {
+                return ResourceManager.GetString("CommingSoonDescription", resourceCulture);
             }
         }
         
@@ -97,6 +124,37 @@ namespace ScrumTools.Resources.Strings {
         internal static string Scrum {
             get {
                 return ResourceManager.GetString("Scrum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scrum Artifacts.
+        /// </summary>
+        internal static string ScrumArtifacts {
+            get {
+                return ResourceManager.GetString("ScrumArtifacts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Backlog: The Product backlog is a living artifact that may be subjected to change, when there is a change in the external business environment, market conditions, regulatory changes or technology changes.
+        ///
+        ///Sprint Backlog: The Sprint backlog formation is usually guided by the Sprint Goal. It is a forecast by the development team on what functionality the team will have to work and deliver.
+        ///
+        ///Burn Down Chart: At any point in time in a Sprint, the total work remaining in the Sprint Backlog can be su [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ScrumArtifactsContent {
+            get {
+                return ResourceManager.GetString("ScrumArtifactsContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Main Scrum Elements.
+        /// </summary>
+        internal static string ScrumArtifactsDescription {
+            get {
+                return ResourceManager.GetString("ScrumArtifactsDescription", resourceCulture);
             }
         }
         
@@ -111,7 +169,7 @@ namespace ScrumTools.Resources.Strings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Definition of Scrum.
+        ///   Looks up a localized string similar to Definition of Scrum framework.
         /// </summary>
         internal static string ScrumDescription {
             get {
