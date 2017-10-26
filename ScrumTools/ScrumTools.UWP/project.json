@@ -1,10 +1,10 @@
 ﻿{
   "dependencies": {
-    "FreshMvvm": "2.2.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-    "UXDivers.GorillaPlayer.SDK": "1.0.0.15",
-    "Xam.Plugins.Settings": "3.0.1",
-    "Xamarin.Forms": "2.3.4.224"
+    "FreshMvvm": "2.2.3",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+    "UXDivers.GorillaPlayer.SDK": "1.1.0.4",
+    "Xam.Plugins.Settings": "3.1.1",
+    "Xamarin.Forms": "2.4.0.18342"
   },
   "frameworks": {
     "uap10.0": {}
