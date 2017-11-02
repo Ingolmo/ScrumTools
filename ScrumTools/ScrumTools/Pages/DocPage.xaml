@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScrumTools.Pages.DocPage"
+             xmlns:resources="clr-namespace:ScrumTools.Resources.Strings;assembly=ScrumTools"
+             Title="Documentation">
+    <ContentPage.Content>
+        <ScrollView Padding="0" Margin="10,0,10,10">
+            <StackLayout>
+                <Label Text="{Binding Doc.Title}"
+                       VerticalOptions="Center" 
+                       FontSize="Large" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}"
+                       Margin="0,5,0,0"/>
+                <Label Text="{Binding Doc.Content}"
+                       VerticalOptions="Center" 
+                       Margin="0,5,0,0"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

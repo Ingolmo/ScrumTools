@@ -10,10 +10,10 @@ namespace ScrumTools.Services
         {
             return new List<Doc>()
             {
-                new Doc() { Title = AppResources.AgilePrinciples, Detail=AppResources.AgilePrinciplesDescription, Icon="principles.png", },
-                new Doc() { Title = AppResources.Scrum, Detail=AppResources.ScrumDescription, Icon="scrum.png", },
-                new Doc() { Title = AppResources.ScrumArtifacts, Detail=AppResources.ScrumArtifactsDescription, Icon="artifacts.png", },
-                new Doc() { Title = AppResources.CommingSoon, Detail=AppResources.CommingSoonDescription, Icon="robot.png", }
+                new Doc() { Title = AppResources.AgilePrinciples, Detail=AppResources.AgilePrinciplesDescription, Content=AppResources.AgilePrinciplesContent ,Icon="principles.png", },
+                new Doc() { Title = AppResources.Scrum, Detail=AppResources.ScrumDescription, Content=AppResources.ScrumContent ,Icon="scrum.png", },
+                new Doc() { Title = AppResources.ScrumArtifacts, Detail=AppResources.ScrumArtifactsDescription, Content=AppResources.ScrumArtifactsContent, Icon="artifacts.png", },
+                new Doc() { Title = AppResources.CommingSoon, Detail=AppResources.CommingSoonDescription, Content=AppResources.CommingSoonContent, Icon="robot.png", }
             };
         }
 

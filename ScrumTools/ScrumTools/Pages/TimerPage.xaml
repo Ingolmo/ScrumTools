@@ -11,7 +11,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Image Grid.Row="0" Source="timer.png"
+            <Image Grid.Row="0" Source="hourglass.png"
                 HeightRequest="150"
                 Margin="5"/>
             <Frame Grid.Row="1" >

@@ -26,7 +26,7 @@ namespace ScrumTools.PageModels
             {
                 if (value != null )
                 {
-                    CoreMethods.PushPageModel<ComingSoonPageModel>(value);
+                    CoreMethods.PushPageModel<DocPageModel>(value);
                     RaisePropertyChanged("SelectedDoc");
                 }
             }
@@ -47,7 +47,7 @@ namespace ScrumTools.PageModels
 
         private async Task GoToDocExecute (Doc doc)
         {
-            await CoreMethods.PushPageModel<ComingSoonPageModel>(null, true, true);
+            await CoreMethods.PushPageModel<DocPageModel>(null, true, true);
         }
     }
 }
