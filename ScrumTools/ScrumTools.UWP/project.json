@@ -2,12 +2,13 @@
   "dependencies": {
     "FreshMvvm": "2.2.3",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
+    "Mobilist.AdvancedTimer.Forms.Plugin": "1.0.1",
     "UXDivers.GorillaPlayer.SDK": "1.1.0.4",
     "Xam.Plugins.Settings": "3.1.1",
-    "Xamarin.Forms": "2.4.0.18342"
+    "Xamarin.Forms": "2.4.0.38779"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10586": {}
   },
   "runtimes": {
     "win10-arm": {},

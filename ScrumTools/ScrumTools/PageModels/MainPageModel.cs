@@ -58,7 +58,7 @@ namespace ScrumTools.PageModels
             _goToAboutCommand = new Command(async () => await GoToAboutExecute());
             _goToEstimateCommand = new Command(async () => await GoToEstimateExecute());
             _goToComingSoonCommand = new Command(async () => await GoToComingSoonExecute());
-            _goToTimerCommand = new Command(async () => await GoToTimerExecute());
+            _goToTimerCommand = new Command(async () => await GoToComingSoonExecute());
             _goToDocumentationCommand = new Command(async () => await GoToDocumentationExecute());
         }
 

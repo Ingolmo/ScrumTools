@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScrumTools.Pages.ComingSoonPage"
              Title="Coming Soon...">
-    <!--<ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
         <ToolbarItem 
             Name="Settings"
             Command="{Binding CloseCommand}"
             Order="Primary" Priority="0" Icon="close" />
-    </ContentPage.ToolbarItems>-->
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <Image HeightRequest="150" Margin="0,0,0,20">
